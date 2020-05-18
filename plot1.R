@@ -7,3 +7,8 @@ unzip('household_power_consumption.zip')
 dataset <- read.table('household_power_consumption.txt', sep=';', na.strings = '?', stringsAsFactors = FALSE)
 names(dataset) <- dataset[1, ]
 dataset <- dataset[-1,]
+
+## Create New Column 'DateTime' which combine of 'Date' column and 'Time' Column
+library(dplyr)
+dataset <- subset(dataset, Date=='1/2/2007' | Date=='2/2/2007')
+#dataset <- mutate(dataset, DateTime = paste(Date, Time))
