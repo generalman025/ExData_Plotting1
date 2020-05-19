@@ -19,6 +19,6 @@ dataset <- mutate(dataset, DateTime = paste(Date, Time))
 dataset <- mutate(dataset, DateTime = as.POSIXct(strptime(DateTime, '%d/%m/%Y %H:%M:%S'), tz=''))
 
 ## Create plot1.png
-png("figure/plot1.png", width = 480, height = 480)
+png("plot1.png", width = 480, height = 480)
 hist(dataset$Global_active_power, main='Global Active Power', xlab='Global Active Power (kilowatts)', ylim=c(1,1200), col='red')
 dev.off()

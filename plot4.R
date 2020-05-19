@@ -19,7 +19,7 @@ dataset <- mutate(dataset, DateTime = paste(Date, Time))
 dataset <- mutate(dataset, DateTime = as.POSIXct(strptime(DateTime, '%d/%m/%Y %H:%M:%S'), tz=''))
 
 ## Create plot4.png and set subplot
-png("figure/plot4.png", width = 480, height = 480)
+png("plot4.png", width = 480, height = 480)
 par(mfrow=c(2,2))
 
 ## Subplot (1, 1)

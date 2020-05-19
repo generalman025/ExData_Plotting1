@@ -19,6 +19,6 @@ dataset <- mutate(dataset, DateTime = paste(Date, Time))
 dataset <- mutate(dataset, DateTime = as.POSIXct(strptime(DateTime, '%d/%m/%Y %H:%M:%S'), tz=''))
 
 ## Create plot2.png
-png("figure/plot2.png", width = 480, height = 480)
+png("plot2.png", width = 480, height = 480)
 plot(dataset$DateTime, dataset$Global_active_power, type = "S", xlab = '', ylab = 'Global Active Power (kilowatts)')
 dev.off()

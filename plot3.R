@@ -19,7 +19,7 @@ dataset <- mutate(dataset, DateTime = paste(Date, Time))
 dataset <- mutate(dataset, DateTime = as.POSIXct(strptime(DateTime, '%d/%m/%Y %H:%M:%S'), tz=''))
 
 ## Create plot3.png
-png("figure/plot3.png", width = 480, height = 480)
+png("plot3.png", width = 480, height = 480)
 with(dataset, plot(DateTime, Sub_metering_1, type = "S", xlab = '', ylab = 'Energy sub metering'))
 with(dataset, lines(DateTime, Sub_metering_2, col='red'))
 with(dataset, lines(DateTime, Sub_metering_3, col='blue'))
